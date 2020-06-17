@@ -2,21 +2,15 @@ const enhancer = require('./enhancer.js');
 // test away!
 
 
-
-
 describe('repair()', function () {
 
-
     test('should repair ', function () {
-
         //arrange
         const expected = 100;
-
 
         const item = { name: 'gruktor', enhancement: '20', durability: 20 }
         //act
         const actual = enhancer.repair(item)
-
         //assert
         expect(actual).toBe(expected)
 
@@ -28,7 +22,7 @@ describe('succeed()', function () {
 
         const expected = 20
 
-        const item = { name: 'gruktor', enhancement: 19, durability: 90 }
+        const item = { name: 'Great Axe', enhancement: 19, durability: 90 }
 
         const enhance = enhancer.succeed(item)
 
