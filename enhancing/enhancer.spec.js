@@ -8,7 +8,7 @@ describe('repair()', function () {
         //arrange
         const expected = 100;
 
-        const item = { name: 'gruktor', enhancement: '20', durability: 20 }
+        const item = { name: 'Destroyer of Worlds', enhancement: '20', durability: 20 }
         //act
         const actual = enhancer.repair(item)
         //assert
@@ -22,7 +22,7 @@ describe('succeed()', function () {
 
         const expected = 20
 
-        const item = { name: 'Great Axe', enhancement: 19, durability: 90 }
+        const item = { name: 'Great Axe of the Sundering', enhancement: 19, durability: 90 }
 
         const enhance = enhancer.succeed(item)
 
@@ -50,8 +50,8 @@ describe('get()', function () {
 
     it('returns item name plus enhacement level', function () {
 
-        const expected = { name: '[+7] great sword', enhancement: 7 }
-        const item = { name: 'great sword', enhancement: 7 }
+        const expected = { name: "[+5] Protector's Shield", enhancement: 5 }
+        const item = { name: "Protector's Shield", enhancement: 5 }
 
         const newName = enhancer.get(item)
 

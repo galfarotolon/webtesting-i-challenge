@@ -70,9 +70,11 @@ function repair(item) {
 
 function get(item) {
 
-  if (item.enhancement > 0) {
+  if (item.enhancement >= 0 && item.enhancement <= 20) {
     let level = item.enhancement;
     item.name = `[+${level}] ` + item.name
+  } else {
+    console.log('error: enhancement level must be between 0 and 20')
   }
 
   return item;
