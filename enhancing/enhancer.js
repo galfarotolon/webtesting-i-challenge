@@ -69,8 +69,9 @@ function repair(item) {
 // Example: the name of a "Iron Sword" enhanced to 7 would be "[+7] Iron Sword".
 
 function get(item) {
-
-  if (item.enhancement >= 0 && item.enhancement <= 20) {
+  if (item.enhancement === 0) {
+    return item;
+  } else if (item.enhancement > 0 && item.enhancement <= 20) {
     let level = item.enhancement;
     item.name = `[+${level}] ` + item.name
   } else {
